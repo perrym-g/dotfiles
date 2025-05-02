@@ -210,6 +210,7 @@ return {
 			emmet_language_server = {},
 			phpactor = {},
 			jsonls = {},
+			unocss = {},
 
 			-- clangd = {},
 			-- gopls = {},
