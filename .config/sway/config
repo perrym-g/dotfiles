@@ -12,6 +12,10 @@ input type:keyboard {
     xkb_layout us
     xkb_options caps:super
 }
+input type:pointer {
+    accel_profile "flat"
+    pointer_accel 0
+}
 # Home row direction keys, like vim
 set $left h
 set $down j
