@@ -211,6 +211,10 @@ return {
 			phpactor = {},
 			jsonls = {},
 			unocss = {},
+			clangd = {},
+			omnisharp = {},
+			texlab = {},
+			pyright = {},
 
 			-- clangd = {},
 			-- gopls = {},

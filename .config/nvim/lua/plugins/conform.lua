@@ -11,6 +11,8 @@ return {
 			-- Conform will run the first available formatter
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			php = { "php-cs-fixer", stop_after_first = true },
+			c = { "clang_format" },
+			tex = { "latexindent", lsp_format = "fallback" },
 		},
 		formatters = {
 			["php-cs-fixer"] = {

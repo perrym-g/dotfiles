@@ -1,8 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-# my stuff i guesss
-
+source /usr/share/git-core/contrib/completion/git-prompt.sh
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 # If not running interactively, don't do anything
@@ -65,7 +61,8 @@ GIT_PS1_SHOWUNTRACKEDFILES=false
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\e[38;5;160m\]$(__git_ps1 "(%s)")\[\e[0m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[38;5;160m\]$(__git_ps1 "(%s)")\[\e[0m\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -124,10 +121,25 @@ if ! shopt -oq posix; then
 fi
 
 
-. "$HOME/.cargo/env"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/home/perry/.splashkit:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/perry/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/perry/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/perry/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/perry/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
