@@ -250,7 +250,11 @@ bindsym $mod+r mode "resize"
 default_border none
 gaps outer 2
 gaps inner 5
+
+for_window [class="obsidian"] move to workspace 1, resize set width 30 ppt height 100 ppt
+for_window [app_id="org.mozilla.Thunderbird"] move to workspace 1, resize set width 70 ppt
+exec sh -c 'flatpak run md.obsidian.Obsidian >/dev/null 2>&1 &'
+exec sh -c 'sleep 1; flatpak run org.mozilla.Thunderbird >/dev/null 2>&1 &'
+
 focus output DP-3
-
-
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
