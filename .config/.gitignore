@@ -1,0 +1,17 @@
+Thunar/accels.scm
+Thunar/uca.xml
+dconf/user
+fish/config.fish
+lxqt/lxqt.conf
+mimeapps.list
+pavucontrol.ini
+protonmail/bridge-v3/grpcFocusServerConfig.json
+protonmail/bridge-v3/imap-sync/sync-xDEhnOgayT5ZPo7ys6nwNgD4s8net2wZMbEPCv1gxPeT326rgyLwmNIXMnAy32CDiEH3XK43huDyGyz22cnCpg==
+protonmail/bridge-v3/keychain.json
+protonmail/bridge-v3/keychain_state.json
+protonmail/bridge-v3/vault.enc
+pulse/cookie
+user-dirs.dirs
+user-dirs.locale
+xarchiver/xarchiverrc
+xfce4/xfconf/xfce-perchannel-xml/thunar.xml
