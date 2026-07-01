@@ -1,0 +1,3 @@
+#ignore arduio ides
+.config/Arduino IDE/
+.config/arduino-ide/

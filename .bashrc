@@ -141,5 +141,6 @@ export PATH="/home/perry/.splashkit:$PATH"
 #     fi
 # fi
 # unset __conda_setup
-# <<< conda initialize <<<
-
+#<<< conda initialize <<<
+#dot file checking if linked cause i bungled it
+alias conda-start='source ~/conda.bashrc'
